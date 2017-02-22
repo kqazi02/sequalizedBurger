@@ -1,0 +1,5 @@
+USE burger_db;
+
+INSERT INTO burgers (burger_name)
+VALUES ("BEEF JALAPENO PEPPERJACK"), ("BISON PROVOLONE"), ("ELK AMERICAN");
+

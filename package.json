@@ -1,0 +1,29 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Let's the user add a burger to the database and \"consume\" it.",
+  "main": "server.js",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kqazi02/burger.git"
+  },
+  "author": "Kashan Ali Qazi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kqazi02/burger/issues"
+  },
+  "homepage": "https://github.com/kqazi02/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0"
+  }
+}
