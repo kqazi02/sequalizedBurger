@@ -34,6 +34,8 @@ var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
 //deploy the application
-app.listen(PORT, function(){
-    console.log("Listening on port", PORT);
+db.sequalize.sync().then(function(){
+    app.listen(PORT, function(){
+        console.log("Listening on port", PORT);
+    });
 });
