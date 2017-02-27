@@ -1,8 +1,10 @@
+//exporting the model for sequelize to create the schema
 module.exports = function(sequelize, DataTypes) {
   var Burgers = sequelize.define("Burgers",{
 
     id: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true 
     },
@@ -23,7 +25,7 @@ module.exports = function(sequelize, DataTypes) {
   },
 
   {
-    timestamp: false
+    timestamps: false
   });
 
   return Burgers;

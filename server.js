@@ -10,6 +10,9 @@ var app = express();
 // create a port for online and local deployment
 var PORT = process.env.PORT || 3000;
 
+// requiring the models
+var db = require("./models");
+
 // add body parser to the application to easily manipulate the responses
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,11 +33,10 @@ app.engine("handlebars", exphbs({defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // import the routes
-var routes = require("./controllers/burgers_controller.js");
-app.use("/", routes);
+require("./routes/htmlRoutes.js")(app);
 
 //deploy the application
-db.sequalize.sync().then(function(){
+db.sequelize.sync().then(function(){
     app.listen(PORT, function(){
         console.log("Listening on port", PORT);
     });
